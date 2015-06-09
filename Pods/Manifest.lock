@@ -1,0 +1,80 @@
+PODS:
+  - AFNetworking (1.3.4)
+  - AMSmoothAlert (1.1):
+    - GPUImage
+  - BFPaperCheckbox (1.2.5):
+    - UIColor+BFPaperColors
+  - BOZPongRefreshControl (1.0.1)
+  - GPUImage (0.1.6)
+  - HexColors (2.2.1)
+  - ICETutorial (1.1.1)
+  - ISO8601DateFormatterValueTransformer (0.6.0):
+    - RKValueTransformers (~> 1.1.0)
+  - RestKit (0.24.0):
+    - RestKit/Core (= 0.24.0)
+  - RestKit/Core (0.24.0):
+    - RestKit/CoreData
+    - RestKit/Network
+    - RestKit/ObjectMapping
+  - RestKit/CoreData (0.24.0):
+    - RestKit/ObjectMapping
+  - RestKit/Network (0.24.0):
+    - AFNetworking (~> 1.3.0)
+    - RestKit/ObjectMapping
+    - RestKit/Support
+    - SOCKit
+  - RestKit/ObjectMapping (0.24.0):
+    - ISO8601DateFormatterValueTransformer (~> 0.6.0)
+    - RestKit/Support
+    - RKValueTransformers (~> 1.1.0)
+  - RestKit/Support (0.24.0):
+    - TransitionKit (= 2.1.0)
+  - RJBlurAlertView (0.0.2)
+  - RKDropdownAlert (0.1.1)
+  - RKValueTransformers (1.1.1)
+  - SDWebImage (3.7.1):
+    - SDWebImage/Core (= 3.7.1)
+  - SDWebImage/Core (3.7.1)
+  - Shimmer (1.0.2)
+  - SOCKit (1.1)
+  - STTwitter (0.1.8)
+  - TransitionKit (2.1.0)
+  - TSMessages (0.9.12):
+    - HexColors
+  - UIColor+BFPaperColors (1.3.1)
+
+DEPENDENCIES:
+  - AMSmoothAlert
+  - BFPaperCheckbox
+  - BOZPongRefreshControl
+  - ICETutorial
+  - RestKit
+  - RJBlurAlertView
+  - RKDropdownAlert
+  - SDWebImage
+  - Shimmer
+  - STTwitter
+  - TSMessages
+
+SPEC CHECKSUMS:
+  AFNetworking: 80c4e0652b08eb34e25b9c0ff3c82556fe5967b4
+  AMSmoothAlert: 1b4bf6688b698a606a963c336b5060490f4d3db2
+  BFPaperCheckbox: e069c28c60eb4b237a8f35e3be66aa57715f508c
+  BOZPongRefreshControl: 78a37a7f79a3f1a9215fb48f8ccbda7f0ad75c83
+  GPUImage: cecb0830bb9428f50192042e3c7b53810f51388e
+  HexColors: 01384d2bbe8dc4ffa43c3b4135db6e976952d153
+  ICETutorial: 785f7ea764f7d4f3702d7561497fd3c286134431
+  ISO8601DateFormatterValueTransformer: a705384ea6531255258e25b6480ba1180db703a0
+  RestKit: 8e301e50e1d25ce427215539f4fd72463f4a2a58
+  RJBlurAlertView: f734c4811b2bee95892ce47bf1159e8e4452191c
+  RKDropdownAlert: f9ef694f0b54e075b5e0bd61827bd69c8d29c051
+  RKValueTransformers: 67b4ea3eb6a1c1a0b8c3c37eb4e4c05e4febeba2
+  SDWebImage: 116e88633b5b416ea0ca4b334a4ac59cf72dd38d
+  Shimmer: 057fcfe9c1c978d69d50b64fce93a61080cd08ec
+  SOCKit: d8d0dd3688ae1026c12367570da8fa8e1a6980fb
+  STTwitter: 15d299aeb63fe7aad6285d61dd058d0aaa778a82
+  TransitionKit: 6a6f3ddda38ae758778aa889dcb930e4f8d64edc
+  TSMessages: b2b5dc71f65146387e51f2600bb0eb8f3a6c4ab8
+  UIColor+BFPaperColors: c7e4c6e4d82e889d507b3c2d09e6caf816529f18
+
+COCOAPODS: 0.35.0

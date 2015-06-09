@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<string>Weather</string>
+		<string>Units</string>
+	</array>
+	<array>
+		<string>News</string>
+		<string>World</string>
+		<string>US</string>
+		<string>Politics</string>
+		<string>Asia</string>
+		<string>Entertainment</string>
+		<string>Tech</string>
+		<string>Finance</string>
+		<string>Sports</string>
+		<string>Travel</string>
+		<string>Living</string>
+	</array>
+	<array>
+		<string>Nearest…</string>
+		<string>Café</string>
+		<string>Gas Station</string>
+		<string>Breakfast</string>
+		<string>Arts and Entertainment</string>
+	</array>
+	<array>
+		<string>Slides</string>
+		<string>Weather</string>
+		<string>News</string>
+		<string>Nearest…</string>
+		<string>Twitter</string>
+		<string>C&amp;R</string>
+		<string>Stocks</string>
+	</array>
+	<array>
+		<string>cool.af</string>
+		<string>About</string>
+		<string>Contact Us</string>
+	</array>
+	<array>
+		<string>Save and Refresh</string>
+	</array>
+</array>
+</plist>

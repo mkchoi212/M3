@@ -1,0 +1,15 @@
+platform:ios, '8.0'
+
+pod 'Flow'
+pod 'NJKWebViewProgress'
+pod 'STTweetLabel'
+pod 'INSPullToRefresh'
+pod 'Shimmer'
+pod 'SDWebImage'
+pod 'ICETutorial'
+pod 'AMSmoothAlert'
+pod 'STTwitter’
+pod 'RJBlurAlertView'
+pod 'BOZPongRefreshControl'
+pod 'TSMessages'
+pod 'RestKit'
