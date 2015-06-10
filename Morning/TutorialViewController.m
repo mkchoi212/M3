@@ -157,8 +157,6 @@
 
 -(void)introductionDidChangeToPanel:(MYIntroductionPanel *)panel withIndex:(NSInteger)panelIndex{
     if(panelIndex == 5){
-        self.introductionView.SkipButton.titleLabel.text = @"Go";
-        
         self.locationManager = [[CLLocationManager alloc] init];
         self.locationManager.delegate = self;
         #ifdef __IPHONE_8_0
@@ -166,6 +164,9 @@
             [self requestAuthorization];
         }
         #endif
+    }
+    if(panelIndex == 5){
+        self.introductionView.SkipButton.titleLabel.text = @"Go";
     }
 }
 

@@ -80,7 +80,7 @@
     NSError *clientError;
     NSDictionary *params = [[NSDictionary alloc] initWithObjectsAndKeys:tweetID, @"id", nil];
     NSURLRequest *request = [[[Twitter sharedInstance] APIClient]
-                             URLRequestWithMethod:@"GET"
+                             URLRequestWithMethod:@"POST"
                              URL:statusesShowEndpoint
                              parameters:params
                              error:&clientError];

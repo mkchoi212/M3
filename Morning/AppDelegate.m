@@ -25,6 +25,7 @@
     //twitter setup with fabric
     
     [[Twitter sharedInstance] startWithConsumerKey:@"HSnVLZS3UAFpPGjARLNJUQ" consumerSecret:@"YhTD8Fbubjgah6xIeqBzxw2mEp6Xeru8fzGMpNFSr7c"];
+
     [Fabric with:@[[Twitter sharedInstance]]];
 
     

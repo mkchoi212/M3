@@ -32,25 +32,7 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
-    /*
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-      
-        
-       [UIView animateWithDuration:0.5 animations:^{
-            [self.collectionView performBatchUpdates:^{
-                [self.collectionView reloadSections:[NSIndexSet indexSetWithIndex:0]];
-            } completion:nil];
-        }];
-    });
-     */
-    
-   /* [self.collectionView performBatchUpdates:^{
-        [self.collectionView reloadSections:[NSIndexSet indexSetWithIndex:0]];
-    } completion:^(BOOL finished) {
-        [UIView setAnimationsEnabled:YES];
-    }];
-    });*/
-    
+
 }
 
 - (void)viewDidLoad{
@@ -246,8 +228,8 @@
         [item setObject:date forKey:@"pubDate"];
         
         [_feeds addObject:[item copy]];
-        
     }
+    
     
 }
 
@@ -330,7 +312,7 @@
     for(int i = 0; i < searchSettings.count; i++){
         if([[[_feeds objectAtIndex:row] objectForKey: @"title"] isEqualToString:[searchSettings objectAtIndex:i]] && slidingMenuCell.read == NO){
             slidingMenuCell.read = YES;
-            [slidingMenuCell newsRead];
+            //[slidingMenuCell newsRead];
             
         }
     }
@@ -349,12 +331,12 @@
     [self presentViewController:detail animated:YES completion:nil];
     
     //save article name once pressed
-    NSMutableArray *searchSettings = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:@"read"]];
+    /*NSMutableArray *searchSettings = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:@"read"]];
     [searchSettings addObject:name];
     [[NSUserDefaults standardUserDefaults] setObject:searchSettings forKey:@"read"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
-    [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
+    [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];*/
 }
 
 

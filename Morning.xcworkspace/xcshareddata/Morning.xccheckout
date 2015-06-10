@@ -12,22 +12,34 @@
 	<dict>
 		<key>0C0B8174AECE276E70479D37FB96EB021A80E770</key>
 		<string>https://github.com/mkchoi212/M2..git</string>
+		<key>1EF175AA659CF0FA1AFEF5A6EA3166CFEF925AA1</key>
+		<string>https://github.com/mkchoi212/M3.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Morning.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>0C0B8174AECE276E70479D37FB96EB021A80E770</key>
+		<string>...</string>
+		<key>1EF175AA659CF0FA1AFEF5A6EA3166CFEF925AA1</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/mkchoi212/M2..git</string>
+	<string>https://github.com/mkchoi212/M3.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>0C0B8174AECE276E70479D37FB96EB021A80E770</string>
+	<string>1EF175AA659CF0FA1AFEF5A6EA3166CFEF925AA1</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1EF175AA659CF0FA1AFEF5A6EA3166CFEF925AA1</string>
+			<key>IDESourceControlWCCName</key>
+			<string>M2</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

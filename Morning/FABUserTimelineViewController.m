@@ -22,12 +22,6 @@
     [super viewDidLoad];
     
     self.navigationItem.title = [NSString stringWithFormat:@"@%@", self.screenName];
-    TWTRAPIClient *APIClient = [[Twitter sharedInstance] APIClient];
-    
-    /*TWTRUserTimelineDataSource *userTimelineDataSource = [[TWTRUserTimelineDataSource alloc] initWithScreenName:self.screenName APIClient:APIClient];
-    [userTimelineDataSource includeReplies];
-    [userTimelineDataSource includeRetweets];
-    self.dataSource = userTimelineDataSource;*/
     
     NSString *statusesShowEndpoint = @"https://api.twitter.com/1.1/statuses/home_timeline.json";
     NSError *clientError;

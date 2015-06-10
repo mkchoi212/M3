@@ -164,6 +164,7 @@
             UIAlertAction *dismiss = [UIAlertAction actionWithTitle:@"Dismiss" style:UIAlertActionStyleDestructive handler:nil];
             [alert addAction:dismiss];
             [self presentViewController:alert animated:true completion:nil];
+            [tableView deselectRowAtIndexPath:indexPath animated:YES];
             return;
         }
         
