@@ -12,6 +12,7 @@
 typedef void(^DSTwitterHomeTimelineCompletion)(NSArray *tweets, NSError *error);
 typedef void(^DSTwitterRetweetCompletion)(NSError *error);
 typedef void(^DSTwitterFavoriteCompletion)(NSError *error);
+typedef void(^DSTwitterTweetCotainsImageCompletion)(NSURL *url, NSError *error);
 
 @interface DSTwitterAPI : NSObject
 
@@ -19,5 +20,7 @@ typedef void(^DSTwitterFavoriteCompletion)(NSError *error);
 
 + (void)retweetTweetWithID:(NSString *)tweetID completion:(DSTwitterRetweetCompletion)completion;
 + (void)favoriteTweetWithID:(NSString *)tweetID completion:(DSTwitterRetweetCompletion)completion;
+
++ (void)tweetContainsImage:(NSString *)tweetID completion:(DSTwitterTweetCotainsImageCompletion)completion;
 
 @end

@@ -7,10 +7,12 @@
 //
 
 #import "DSTweetViewController.h"
+#import "SDWebImageManager.h"
 
 @interface DSTweetViewController ()
 
-@property (nonatomic, strong) IBOutlet TWTRTweetView *tweetView;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
 
@@ -26,7 +28,21 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [self.tweetView configureWithTweet:self.tweet];
+    [self.activityIndicator startAnimating];
+    SDWebImageManager *manager = [SDWebImageManager sharedManager];
+    [manager downloadImageWithURL:self.mediaURL
+                          options:0
+                         progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+                             // progression tracking code
+                         }
+                        completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+                            if (image) {
+                                // do something with image
+                                [self.activityIndicator stopAnimating];
+                                self.imageView.image = image;
+                            }
+                        }];
+    
 }
 
 - (void)didReceiveMemoryWarning {

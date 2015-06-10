@@ -11,6 +11,6 @@
 
 @interface DSTweetViewController : UIViewController
 
-@property (nonatomic, strong) TWTRTweet *tweet;
+@property (nonatomic, strong) NSURL *mediaURL;
 
 @end

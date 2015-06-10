@@ -42,6 +42,12 @@
     
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.navigationController.navigationBarHidden = NO;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -148,15 +154,26 @@
 
 - (void)tweetView:(TWTRTweetView *)tweetView didSelectTweet:(TWTRTweet *)tweet {
     
-    [self performSegueWithIdentifier:@"ShowTweet" sender:tweet];
+    [DSTwitterAPI tweetContainsImage:tweet.tweetID completion:^(NSURL *url, NSError *error) {
+        if (error) {
+            NSLog(@"Error checking media in tweet: %@", error);
+        } else {
+            if (url != nil){
+                NSLog(@"Tweet contains media: %@", url);
+                [self performSegueWithIdentifier:@"ShowTweet" sender:url];
+            }
+        }
+    }];
+    
+    
     
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"ShowTweet"]) {
+        NSURL *url = (NSURL*)sender;
         DSTweetViewController *vc = segue.destinationViewController;
-        vc.tweet = (TWTRTweet*)sender;
-         NSLog(@"Did select Tweet: %@", (TWTRTweet*)sender);
+        vc.mediaURL = url;
     }
 }
 

@@ -792,7 +792,7 @@
         <!--Twitter Table View Controller-->
         <scene sceneID="R5M-xk-onW">
             <objects>
-                <tableViewController storyboardIdentifier="TwitterViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="J9r-IG-Lzl" customClass="TwitterTableViewController" sceneMemberID="viewController">
+                <tableViewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="J9r-IG-Lzl" customClass="TwitterTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="n62-dt-RDW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -813,10 +813,13 @@
                     <navigationItem key="navigationItem" id="94I-SY-e1g"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <segue destination="Coh-YD-oM0" kind="show" identifier="UserTimeline" id="nLf-Pz-htX"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vne-Mf-mkU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3230" y="1084"/>
+            <point key="canvasLocation" x="5005" y="1332"/>
         </scene>
         <!--Twitter Trend Timeline Table View Controller-->
         <scene sceneID="m3o-GO-vdn">
@@ -837,7 +840,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xwv-eH-RUv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3805" y="940"/>
+            <point key="canvasLocation" x="5429" y="940"/>
         </scene>
         <!--User Timeline View Controller-->
         <scene sceneID="adn-sL-OOX">
@@ -860,6 +863,7 @@
                             <outlet property="delegate" destination="Coh-YD-oM0" id="qsn-P0-RQ9"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="FhM-BW-STo"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
@@ -868,7 +872,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Lw-kF-AcJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3846" y="1585"/>
+            <point key="canvasLocation" x="5429" y="1616"/>
         </scene>
         <!--Tweet View Controller-->
         <scene sceneID="7ep-me-kJk">
@@ -878,32 +882,58 @@
                         <viewControllerLayoutGuide type="top" id="72s-m7-DOQ"/>
                         <viewControllerLayoutGuide type="bottom" id="F6p-Oo-8wT"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8eL-ao-Jpv" customClass="TWTRTweetView">
+                    <view key="view" contentMode="scaleToFill" id="8eL-ao-Jpv">
                         <rect key="frame" x="0.0" y="0.0" width="329" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ezI-cN-vCl" customClass="TWTRTweetView">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bux-xg-qX0">
                                 <rect key="frame" x="0.0" y="0.0" width="329" height="568"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="KIH-Nt-CwT">
+                                <rect key="frame" x="146" y="266" width="37" height="37"/>
+                                <color key="color" red="0.95686280729999995" green="0.58823531870000001" blue="0.1411764771" alpha="1" colorSpace="deviceRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ezI-cN-vCl" firstAttribute="top" secondItem="8eL-ao-Jpv" secondAttribute="topMargin" id="DQa-D3-jd8"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ezI-cN-vCl" secondAttribute="trailing" constant="-16" id="PeH-WV-SRU"/>
-                            <constraint firstItem="F6p-Oo-8wT" firstAttribute="top" secondItem="ezI-cN-vCl" secondAttribute="bottom" id="Q0k-GU-SZC"/>
-                            <constraint firstItem="ezI-cN-vCl" firstAttribute="leading" secondItem="8eL-ao-Jpv" secondAttribute="leadingMargin" constant="-16" id="rIp-b5-gTl"/>
+                            <constraint firstAttribute="centerX" secondItem="KIH-Nt-CwT" secondAttribute="centerX" id="09R-XK-jCI"/>
+                            <constraint firstAttribute="centerY" secondItem="KIH-Nt-CwT" secondAttribute="centerY" id="7yJ-iQ-o1z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bux-xg-qX0" secondAttribute="trailing" constant="-16" id="C7b-ve-4XK"/>
+                            <constraint firstItem="F6p-Oo-8wT" firstAttribute="top" secondItem="bux-xg-qX0" secondAttribute="bottom" id="LHd-Rx-IvW"/>
+                            <constraint firstItem="bux-xg-qX0" firstAttribute="top" secondItem="8eL-ao-Jpv" secondAttribute="topMargin" id="bx0-t8-nLi"/>
+                            <constraint firstItem="bux-xg-qX0" firstAttribute="leading" secondItem="8eL-ao-Jpv" secondAttribute="leadingMargin" constant="-16" id="nnl-So-Fyb"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="329" height="568"/>
                     <connections>
-                        <outlet property="tweetView" destination="ezI-cN-vCl" id="F2g-6x-44w"/>
+                        <outlet property="activityIndicator" destination="KIH-Nt-CwT" id="USh-lv-lo3"/>
+                        <outlet property="imageView" destination="bux-xg-qX0" id="xIB-pW-U3k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jNT-DS-rba" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4209.5" y="1585"/>
+            <point key="canvasLocation" x="5792.5" y="1616"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JbL-X0-H5J">
+            <objects>
+                <navigationController storyboardIdentifier="TwitterViewController" automaticallyAdjustsScrollViewInsets="NO" id="jBH-JM-Iwl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hlA-3L-s8K">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="J9r-IG-Lzl" kind="relationship" relationship="rootViewController" id="tBQ-zt-Vd0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mkl-Z0-KGa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4593" y="1332"/>
         </scene>
     </scenes>
     <resources>

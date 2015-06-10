@@ -53,6 +53,8 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    self.navigationController.navigationBarHidden = YES;
 }
 
 
@@ -168,26 +170,23 @@
             return;
         }
         
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        //FABUserTimelineViewController *modalVC = [[FABUserTimelineViewController alloc]init];
-        DSUserTimelineViewController *modalVC = [storyboard instantiateViewControllerWithIdentifier:@"DSUserTimelineViewController"];
-        modalVC.screenName = self.screenName;
+        [self performSegueWithIdentifier:@"UserTimeline" sender:self];
         
-        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:modalVC];
-        nav.navigationBar.topItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:(UIBarButtonSystemItemStop) target:self action:@selector(backButtonItemToDismissModal)];
-        nav.navigationBar.translucent = NO;
-        nav.modalPresentationStyle = UIModalPresentationCustom;
-        
-        self.animator = [[ZFModalTransitionAnimator alloc] initWithModalViewController:modalVC];
-        self.animator.dragable = YES;
-        self.animator.bounces = YES;
-        self.animator.behindViewAlpha = 0.5f;
-        self.animator.behindViewScale = 0.8f;
-        self.animator.transitionDuration = 0.7f;
-        self.animator.direction = ZFModalTransitonDirectionBottom;
-        [self.animator setContentScrollView:modalVC.tableView];
-        nav.transitioningDelegate = self.animator;
-        [self presentViewController:nav animated:YES completion:nil];
+//        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:modalVC];
+//        nav.navigationBar.topItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:(UIBarButtonSystemItemStop) target:self action:@selector(backButtonItemToDismissModal)];
+//        nav.navigationBar.translucent = NO;
+//        nav.modalPresentationStyle = UIModalPresentationCustom;
+//        
+//        self.animator = [[ZFModalTransitionAnimator alloc] initWithModalViewController:modalVC];
+//        self.animator.dragable = YES;
+//        self.animator.bounces = YES;
+//        self.animator.behindViewAlpha = 0.5f;
+//        self.animator.behindViewScale = 0.8f;
+//        self.animator.transitionDuration = 0.7f;
+//        self.animator.direction = ZFModalTransitonDirectionBottom;
+//        [self.animator setContentScrollView:modalVC.tableView];
+//        nav.transitioningDelegate = self.animator;
+//        [self presentViewController:nav animated:YES completion:nil];
     } else {
         TwitterTrendTimelineTableViewController *modalVC = [[TwitterTrendTimelineTableViewController alloc]init];
         modalVC.trend = [self.trends objectAtIndex:[self.tableView indexPathForSelectedRow].row];
@@ -216,6 +215,13 @@
     
     [self dismissViewControllerAnimated:YES completion:nil];
     
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"UserTimeline"]) {
+        DSUserTimelineViewController *vc = segue.destinationViewController;
+        vc.screenName = self.screenName;
+    }
 }
 
 
