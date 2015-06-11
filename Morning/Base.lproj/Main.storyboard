@@ -813,9 +813,6 @@
                     <navigationItem key="navigationItem" id="94I-SY-e1g"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
-                    <connections>
-                        <segue destination="Coh-YD-oM0" kind="show" identifier="UserTimeline" id="nLf-Pz-htX"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vne-Mf-mkU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

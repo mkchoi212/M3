@@ -178,4 +178,13 @@ const CGFloat RPSlidingMenuFeaturedImageCoverAlpha = 0.3f;
 
 }
 
+- (void)setRead:(BOOL)read {
+    if (read == YES) {
+        [self newsRead];
+    } else {
+        [self.readImage removeFromSuperview];
+        [self.checkMark removeFromSuperview];
+    }
+}
+
 @end

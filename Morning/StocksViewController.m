@@ -247,6 +247,8 @@
         }
 }
 
+
+
 - (void)refreshStockView:(NSNotification *)notification{
     NSLog(@"ASDF");
     NSString *key = @"selectedIndex";

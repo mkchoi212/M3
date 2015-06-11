@@ -71,14 +71,12 @@
 		3932C6D81B257C63002D1D29 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3932C6D71B257C63002D1D29 /* Settings.plist */; };
 		3948C77F1B274C0A00671D1C /* DSUserTimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3948C77E1B274C0A00671D1C /* DSUserTimelineViewController.m */; };
 		3948C7821B274DBF00671D1C /* DSTwitterAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 3948C7811B274DBF00671D1C /* DSTwitterAPI.m */; };
-		3972A0A01B276EFC0021E468 /* DSTweetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3972A09F1B276EFC0021E468 /* DSTweetViewController.m */; };
 		39FE98D31B204D3D00DD8A97 /* TwitterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FE98D21B204D3D00DD8A97 /* TwitterTableViewController.m */; };
 		39FE98D61B20512500DD8A97 /* TwitterTrendTimelineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FE98D51B20512500DD8A97 /* TwitterTrendTimelineTableViewController.m */; };
 		A78DE9C29E61401B978B2B62 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B8989DD02AA46CF98F97ABF /* libPods.a */; };
 		CA1FA2D51AFF3EC500EF9A0D /* ZFModalTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1FA2D41AFF3EC500EF9A0D /* ZFModalTransitionAnimator.m */; };
 		CA1FA2D81AFF407300EF9A0D /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1FA2D71AFF407300EF9A0D /* ModalViewController.m */; };
 		CA1FA2DB1AFF440B00EF9A0D /* StockTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1FA2DA1AFF440B00EF9A0D /* StockTableViewCell.m */; };
-		CA23E3C41B1FE3A500FE3B96 /* FABUserTimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA23E3C31B1FE3A500FE3B96 /* FABUserTimelineViewController.m */; };
 		CA23E3C81B1FE47A00FE3B96 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA23E3C51B1FE47A00FE3B96 /* TwitterCore.framework */; };
 		CA23E3C91B1FE47A00FE3B96 /* DigitsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA23E3C61B1FE47A00FE3B96 /* DigitsKit.framework */; };
 		CA23E3CA1B1FE47A00FE3B96 /* DigitsKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CA23E3C71B1FE47A00FE3B96 /* DigitsKitResources.bundle */; };
@@ -105,12 +103,6 @@
 		CA5443F11AFDD39500CE85B4 /* ForcedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA5443F01AFDD39500CE85B4 /* ForcedViewController.m */; };
 		CA5443F41AFDD68700CE85B4 /* PWParallaxScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA5443F31AFDD68700CE85B4 /* PWParallaxScrollView.m */; };
 		CA5443F61AFDD69500CE85B4 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA5443F51AFDD69500CE85B4 /* ViewController_iPhone.xib */; };
-		CA5443FE1AFDD76C00CE85B4 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CA5443F81AFDD76C00CE85B4 /* 1.jpg */; };
-		CA5443FF1AFDD76C00CE85B4 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CA5443F91AFDD76C00CE85B4 /* 2.jpg */; };
-		CA5444001AFDD76C00CE85B4 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CA5443FA1AFDD76C00CE85B4 /* 3.jpg */; };
-		CA5444011AFDD76C00CE85B4 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CA5443FB1AFDD76C00CE85B4 /* 4.jpg */; };
-		CA5444021AFDD76C00CE85B4 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CA5443FC1AFDD76C00CE85B4 /* 5.jpg */; };
-		CA5444031AFDD76C00CE85B4 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CA5443FD1AFDD76C00CE85B4 /* 6.jpg */; };
 		CA58190F1A8564BF004579A8 /* ACPReminder.m in Sources */ = {isa = PBXBuildFile; fileRef = CA58190E1A8564BF004579A8 /* ACPReminder.m */; };
 		CA58CF791AA4E46E005AAF26 /* SKSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA58CF721AA4E46E005AAF26 /* SKSTableView.m */; };
 		CA58CF7A1AA4E46E005AAF26 /* SKSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA58CF741AA4E46E005AAF26 /* SKSTableViewCell.m */; };
@@ -128,6 +120,12 @@
 		CA9D5C6D1AE8990F008B659B /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9D5C6A1AE8990F008B659B /* TwitterKit.framework */; };
 		CA9D5C6E1AE8990F008B659B /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CA9D5C6B1AE8990F008B659B /* TwitterKitResources.bundle */; };
 		CA9D5C6F1AE8990F008B659B /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9D5C6C1AE8990F008B659B /* Fabric.framework */; };
+		CAAFF1DC1B2907350060529A /* JTSImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAFF1D11B2907350060529A /* JTSImageViewController.m */; };
+		CAAFF1DD1B2907350060529A /* JTSImageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAFF1D31B2907350060529A /* JTSImageInfo.m */; };
+		CAAFF1DE1B2907350060529A /* JTSSimpleImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAFF1D51B2907350060529A /* JTSSimpleImageDownloader.m */; };
+		CAAFF1DF1B2907350060529A /* JTSAnimatedGIFUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAFF1D71B2907350060529A /* JTSAnimatedGIFUtility.m */; };
+		CAAFF1E01B2907350060529A /* UIImage+JTSImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAFF1D91B2907350060529A /* UIImage+JTSImageEffects.m */; };
+		CAAFF1E11B2907350060529A /* UIApplication+JTSImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAFF1DB1B2907350060529A /* UIApplication+JTSImageViewController.m */; };
 		CAB11CF31A9D546D009708C3 /* SKPanoramaView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB11CF21A9D546D009708C3 /* SKPanoramaView.m */; };
 		CAB11CF61A9D5512009708C3 /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB11CF51A9D5512009708C3 /* TutorialViewController.m */; };
 		CAB11CFB1A9D7D11009708C3 /* MYIntroductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB11CF81A9D7D10009708C3 /* MYIntroductionView.m */; };
@@ -273,8 +271,6 @@
 		3948C77E1B274C0A00671D1C /* DSUserTimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSUserTimelineViewController.m; sourceTree = "<group>"; };
 		3948C7801B274DBF00671D1C /* DSTwitterAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSTwitterAPI.h; sourceTree = "<group>"; };
 		3948C7811B274DBF00671D1C /* DSTwitterAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSTwitterAPI.m; sourceTree = "<group>"; };
-		3972A09E1B276EFC0021E468 /* DSTweetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSTweetViewController.h; sourceTree = "<group>"; };
-		3972A09F1B276EFC0021E468 /* DSTweetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSTweetViewController.m; sourceTree = "<group>"; };
 		39FE98D11B204D3D00DD8A97 /* TwitterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterTableViewController.h; sourceTree = "<group>"; };
 		39FE98D21B204D3D00DD8A97 /* TwitterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterTableViewController.m; sourceTree = "<group>"; };
 		39FE98D41B20512500DD8A97 /* TwitterTrendTimelineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterTrendTimelineTableViewController.h; sourceTree = "<group>"; };
@@ -287,8 +283,6 @@
 		CA1FA2D71AFF407300EF9A0D /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
 		CA1FA2D91AFF440B00EF9A0D /* StockTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockTableViewCell.h; sourceTree = "<group>"; };
 		CA1FA2DA1AFF440B00EF9A0D /* StockTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockTableViewCell.m; sourceTree = "<group>"; };
-		CA23E3C21B1FE3A500FE3B96 /* FABUserTimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FABUserTimelineViewController.h; sourceTree = "<group>"; };
-		CA23E3C31B1FE3A500FE3B96 /* FABUserTimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FABUserTimelineViewController.m; sourceTree = "<group>"; };
 		CA23E3C51B1FE47A00FE3B96 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
 		CA23E3C61B1FE47A00FE3B96 /* DigitsKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DigitsKit.framework; sourceTree = "<group>"; };
 		CA23E3C71B1FE47A00FE3B96 /* DigitsKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = DigitsKitResources.bundle; path = DigitsKit.framework/Versions/A/Resources/DigitsKitResources.bundle; sourceTree = "<group>"; };
@@ -336,12 +330,6 @@
 		CA5443F21AFDD68700CE85B4 /* PWParallaxScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWParallaxScrollView.h; sourceTree = "<group>"; };
 		CA5443F31AFDD68700CE85B4 /* PWParallaxScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWParallaxScrollView.m; sourceTree = "<group>"; };
 		CA5443F51AFDD69500CE85B4 /* ViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController_iPhone.xib; sourceTree = "<group>"; };
-		CA5443F81AFDD76C00CE85B4 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
-		CA5443F91AFDD76C00CE85B4 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
-		CA5443FA1AFDD76C00CE85B4 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
-		CA5443FB1AFDD76C00CE85B4 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
-		CA5443FC1AFDD76C00CE85B4 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
-		CA5443FD1AFDD76C00CE85B4 /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
 		CA58190D1A8564BF004579A8 /* ACPReminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPReminder.h; sourceTree = "<group>"; };
 		CA58190E1A8564BF004579A8 /* ACPReminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPReminder.m; sourceTree = "<group>"; };
 		CA58CF711AA4E46E005AAF26 /* SKSTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSTableView.h; sourceTree = "<group>"; };
@@ -371,6 +359,18 @@
 		CA9D5C6A1AE8990F008B659B /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterKit.framework; path = Morning/TwitterKit.framework; sourceTree = "<group>"; };
 		CA9D5C6B1AE8990F008B659B /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = Morning/TwitterKitResources.bundle; sourceTree = "<group>"; };
 		CA9D5C6C1AE8990F008B659B /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = Morning/Fabric.framework; sourceTree = "<group>"; };
+		CAAFF1D01B2907350060529A /* JTSImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSImageViewController.h; sourceTree = "<group>"; };
+		CAAFF1D11B2907350060529A /* JTSImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSImageViewController.m; sourceTree = "<group>"; };
+		CAAFF1D21B2907350060529A /* JTSImageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSImageInfo.h; sourceTree = "<group>"; };
+		CAAFF1D31B2907350060529A /* JTSImageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSImageInfo.m; sourceTree = "<group>"; };
+		CAAFF1D41B2907350060529A /* JTSSimpleImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSSimpleImageDownloader.h; sourceTree = "<group>"; };
+		CAAFF1D51B2907350060529A /* JTSSimpleImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSSimpleImageDownloader.m; sourceTree = "<group>"; };
+		CAAFF1D61B2907350060529A /* JTSAnimatedGIFUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSAnimatedGIFUtility.h; sourceTree = "<group>"; };
+		CAAFF1D71B2907350060529A /* JTSAnimatedGIFUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSAnimatedGIFUtility.m; sourceTree = "<group>"; };
+		CAAFF1D81B2907350060529A /* UIImage+JTSImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JTSImageEffects.h"; sourceTree = "<group>"; };
+		CAAFF1D91B2907350060529A /* UIImage+JTSImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JTSImageEffects.m"; sourceTree = "<group>"; };
+		CAAFF1DA1B2907350060529A /* UIApplication+JTSImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+JTSImageViewController.h"; sourceTree = "<group>"; };
+		CAAFF1DB1B2907350060529A /* UIApplication+JTSImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+JTSImageViewController.m"; sourceTree = "<group>"; };
 		CAB11CF11A9D546D009708C3 /* SKPanoramaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKPanoramaView.h; sourceTree = "<group>"; };
 		CAB11CF21A9D546D009708C3 /* SKPanoramaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKPanoramaView.m; sourceTree = "<group>"; };
 		CAB11CF41A9D5512009708C3 /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialViewController.h; sourceTree = "<group>"; };
@@ -435,14 +435,10 @@
 		180D722B1A5F720900C53EBD /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
-				CA23E3C21B1FE3A500FE3B96 /* FABUserTimelineViewController.h */,
-				CA23E3C31B1FE3A500FE3B96 /* FABUserTimelineViewController.m */,
 				3948C7801B274DBF00671D1C /* DSTwitterAPI.h */,
 				3948C7811B274DBF00671D1C /* DSTwitterAPI.m */,
 				3948C77D1B274C0A00671D1C /* DSUserTimelineViewController.h */,
 				3948C77E1B274C0A00671D1C /* DSUserTimelineViewController.m */,
-				3972A09E1B276EFC0021E468 /* DSTweetViewController.h */,
-				3972A09F1B276EFC0021E468 /* DSTweetViewController.m */,
 				39FE98D11B204D3D00DD8A97 /* TwitterTableViewController.h */,
 				39FE98D21B204D3D00DD8A97 /* TwitterTableViewController.m */,
 				39FE98D41B20512500DD8A97 /* TwitterTrendTimelineTableViewController.h */,
@@ -695,6 +691,7 @@
 		189AFFDC1A5B72C100450F27 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CAAFF1E21B29073B0060529A /* Cool Image Selection */,
 				189A00321A5B7A4500450F27 /* TT Sliding Source */,
 				CA30ABE21AEC266400115D5E /* parallax view controller */,
 				CA30ABE31AEC267000115D5E /* status bar notification */,
@@ -841,12 +838,6 @@
 				CA5443F01AFDD39500CE85B4 /* ForcedViewController.m */,
 				CA5443F21AFDD68700CE85B4 /* PWParallaxScrollView.h */,
 				CA5443F31AFDD68700CE85B4 /* PWParallaxScrollView.m */,
-				CA5443F81AFDD76C00CE85B4 /* 1.jpg */,
-				CA5443F91AFDD76C00CE85B4 /* 2.jpg */,
-				CA5443FA1AFDD76C00CE85B4 /* 3.jpg */,
-				CA5443FB1AFDD76C00CE85B4 /* 4.jpg */,
-				CA5443FC1AFDD76C00CE85B4 /* 5.jpg */,
-				CA5443FD1AFDD76C00CE85B4 /* 6.jpg */,
 			);
 			name = "Landscape News View";
 			sourceTree = "<group>";
@@ -905,6 +896,25 @@
 				CA58CF761AA4E46E005AAF26 /* SKSTableViewCellIndicator.m */,
 			);
 			name = "Expanding Table";
+			sourceTree = "<group>";
+		};
+		CAAFF1E21B29073B0060529A /* Cool Image Selection */ = {
+			isa = PBXGroup;
+			children = (
+				CAAFF1D01B2907350060529A /* JTSImageViewController.h */,
+				CAAFF1D11B2907350060529A /* JTSImageViewController.m */,
+				CAAFF1D21B2907350060529A /* JTSImageInfo.h */,
+				CAAFF1D31B2907350060529A /* JTSImageInfo.m */,
+				CAAFF1D41B2907350060529A /* JTSSimpleImageDownloader.h */,
+				CAAFF1D51B2907350060529A /* JTSSimpleImageDownloader.m */,
+				CAAFF1D61B2907350060529A /* JTSAnimatedGIFUtility.h */,
+				CAAFF1D71B2907350060529A /* JTSAnimatedGIFUtility.m */,
+				CAAFF1D81B2907350060529A /* UIImage+JTSImageEffects.h */,
+				CAAFF1D91B2907350060529A /* UIImage+JTSImageEffects.m */,
+				CAAFF1DA1B2907350060529A /* UIApplication+JTSImageViewController.h */,
+				CAAFF1DB1B2907350060529A /* UIApplication+JTSImageViewController.m */,
+			);
+			name = "Cool Image Selection";
 			sourceTree = "<group>";
 		};
 		CAB11CF01A9D53B9009708C3 /* Tutorial */ = {
@@ -1028,18 +1038,12 @@
 				18543F671A66A0F00073F683 /* Localizable_full.strings in Resources */,
 				CA9D5C6E1AE8990F008B659B /* TwitterKitResources.bundle in Resources */,
 				189A00791A5C866F00450F27 /* Default@2x.png in Resources */,
-				CA5444011AFDD76C00CE85B4 /* 4.jpg in Resources */,
-				CA5444001AFDD76C00CE85B4 /* 3.jpg in Resources */,
-				CA5443FF1AFDD76C00CE85B4 /* 2.jpg in Resources */,
 				18543F5B1A664D340073F683 /* LaunchScreen.xib in Resources */,
 				CA5443F61AFDD69500CE85B4 /* ViewController_iPhone.xib in Resources */,
 				CA23E3CA1B1FE47A00FE3B96 /* DigitsKitResources.bundle in Resources */,
 				CA58CF7C1AA4E46E005AAF26 /* expandableImage.png in Resources */,
-				CA5443FE1AFDD76C00CE85B4 /* 1.jpg in Resources */,
 				189A001F1A5B782000450F27 /* Main.storyboard in Resources */,
 				3932C6D81B257C63002D1D29 /* Settings.plist in Resources */,
-				CA5444031AFDD76C00CE85B4 /* 6.jpg in Resources */,
-				CA5444021AFDD76C00CE85B4 /* 5.jpg in Resources */,
 				18543F661A66A0F00073F683 /* Localizable.strings in Resources */,
 				189A00771A5C866F00450F27 /* Default-568h@2x.png in Resources */,
 				189AFFEA1A5B72C100450F27 /* Images.xcassets in Resources */,
@@ -1109,19 +1113,24 @@
 			files = (
 				CAB11CF31A9D546D009708C3 /* SKPanoramaView.m in Sources */,
 				18021DC41A684C5A003411B3 /* SettingsTableViewController.m in Sources */,
+				CAAFF1DE1B2907350060529A /* JTSSimpleImageDownloader.m in Sources */,
 				CA88844F1ACDF069004460C3 /* DataPoint.m in Sources */,
 				CA2870631ACDE8BF00155F86 /* SearchViewController.m in Sources */,
 				CA30AC181AEC29B200115D5E /* DNTutorialAudio.m in Sources */,
 				18BAF9181A61A26D00B0C4C8 /* DetailNewsViewController.m in Sources */,
 				189A00A21A5C86C800450F27 /* CZWundergroundService.m in Sources */,
+				CAAFF1E01B2907350060529A /* UIImage+JTSImageEffects.m in Sources */,
 				189A009C1A5C86C800450F27 /* NSString+CZWeatherKit_Substring.m in Sources */,
+				CAAFF1E11B2907350060529A /* UIApplication+JTSImageViewController.m in Sources */,
 				189A009E1A5C86C800450F27 /* CZWeatherRequest.m in Sources */,
 				CA30AC1B1AEC29B200115D5E /* DNTutorialGesture.m in Sources */,
 				18543F501A66422A0073F683 /* CZWeatherView.m in Sources */,
+				CAAFF1DF1B2907350060529A /* JTSAnimatedGIFUtility.m in Sources */,
 				189A00A01A5C86C800450F27 /* CZOpenWeatherMapService.m in Sources */,
 				186AE75A1A704E61000A9C71 /* EKCalendar+Model.m in Sources */,
 				CA3842001ACDD1D7008A9A07 /* INSInfiniteScrollBackgroundView.m in Sources */,
 				189A00A11A5C86C800450F27 /* CZWorldWeatherOnlineService.m in Sources */,
+				CAAFF1DD1B2907350060529A /* JTSImageInfo.m in Sources */,
 				CA28705F1ACDE7F000155F86 /* AFBlurSegue.m in Sources */,
 				189AFFE51A5B72C100450F27 /* MainViewController.m in Sources */,
 				CAB29EAB1AE1B1E700728A41 /* NJKWebViewProgressView.m in Sources */,
@@ -1138,7 +1147,6 @@
 				185318DF1A648EEA0079D280 /* Location.m in Sources */,
 				185318E21A648EEA0079D280 /* VenueCell.m in Sources */,
 				CA6984321AA59AB4005B05E8 /* MAFinance.m in Sources */,
-				3972A0A01B276EFC0021E468 /* DSTweetViewController.m in Sources */,
 				CAFCE30C1A9D32CB00E165FE /* RPSlidingMenuViewController.m in Sources */,
 				189A002E1A5B7A4000450F27 /* TTSlidingPage.m in Sources */,
 				39FE98D31B204D3D00DD8A97 /* TwitterTableViewController.m in Sources */,
@@ -1184,12 +1192,12 @@
 				186AE75B1A704E61000A9C71 /* InfoCell.m in Sources */,
 				CA3842011ACDD1D7008A9A07 /* INSPullToRefreshBackgroundView.m in Sources */,
 				CA6984331AA59AB4005B05E8 /* MAStockGraph.m in Sources */,
-				CA23E3C41B1FE3A500FE3B96 /* FABUserTimelineViewController.m in Sources */,
 				18543F6B1A66AA070073F683 /* CRViewController.m in Sources */,
 				CA58CF791AA4E46E005AAF26 /* SKSTableView.m in Sources */,
 				CAFCE3051A9D2F3900E165FE /* RPSlidingMenuCell.m in Sources */,
 				CA30AC1D1AEC29B200115D5E /* DNTutorialStep.m in Sources */,
 				CA6984351AA59AB4005B05E8 /* Circle.m in Sources */,
+				CAAFF1DC1B2907350060529A /* JTSImageViewController.m in Sources */,
 				189AFFE21A5B72C100450F27 /* AppDelegate.m in Sources */,
 				CA4EE3971A82D73F0038B893 /* Reachability.m in Sources */,
 				189AFFDF1A5B72C100450F27 /* main.m in Sources */,

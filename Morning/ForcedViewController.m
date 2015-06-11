@@ -83,7 +83,7 @@
 
     if(index == 0){
         label.text = [feeds objectAtIndex:0];
-        [label setAlpha:0.7f];
+        [label setAlpha:1.0f];
         [label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:200]];
         [label setUserInteractionEnabled:NO];
     }

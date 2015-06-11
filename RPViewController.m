@@ -90,7 +90,6 @@
 #pragma mark DOWNLOAD IMAGES
 - (void)composeURL:(void (^)(BOOL done))completion
 {
-    NSLog(@"composeURL");
     search = [[NSMutableArray alloc] init];
     for (int i = 0; i<_feeds.count; i++){
         NSString *query;
@@ -112,7 +111,6 @@
 
 - (void)parseJSON:(void (^)(BOOL done))completion
 {
-    NSLog(@"parseJSON");
     [self composeURL:^(BOOL done) {
         if (done == true) {
             //if(7!=0){
@@ -133,7 +131,6 @@
 
 -(void)parseImageUrlFromJSON
 {
-    NSLog(@"parseImageUrlFromJSON");
     [self parseJSON:^(BOOL done) {
         if (done == true ) {
             self.imageLinks = [[NSMutableArray alloc] init];
@@ -184,10 +181,18 @@
                                 if (jsonDict) {
                                     NSString *imageURL = [jsonDict objectForKey:@"url"];
                                     [self.imageLinks addObject:imageURL];
+                                } else {
+                                    [self.imageLinks addObject:@""];
                                 }
                             }
+                        } else {
+                            [self.imageLinks addObject:@""];
                         }
+                    } else {
+                        [self.imageLinks addObject:@""];
                     }
+                } else {
+                    [self.imageLinks addObject:@""];
                 }
                 if (i == _feeds.count -1) {
                     [self.collectionView reloadData];
@@ -200,7 +205,6 @@
 #pragma mark RSS FEED SETUP
 
 - (void)parserDidStartDocument:(NSXMLParser *)parser {
-    NSLog(@"parserDidStartDocument");
 }
 
 
@@ -249,8 +253,6 @@
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser {
     
-    NSLog(@"parserDidEndDocument");
-    
     //[self parseImageUrlFromJSON];
     [self dsparse];
     
@@ -272,19 +274,12 @@
         url = [self.imageLinks objectAtIndex:row];
     }
 
-    [slidingMenuCell.backgroundImageView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"black"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        if (error != nil ) {
-            NSLog(@"error loading async image for cell at row %li: %@", (long)row, error);
-        } else {
-            NSLog(@"loaded image for cell at row %li", (long)row);
-        }
-    }];
+    [slidingMenuCell.backgroundImageView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"black"] completed:nil];
     slidingMenuCell.textLabel.text = [[_feeds objectAtIndex:row] objectForKey: @"title"];
     slidingMenuCell.detailTextLabel.text = [[_feeds objectAtIndex:row] objectForKey: @"pubDate"];
     
     categoryName = [_feeds[row] objectForKey: @"feedburner:origLink"];
     
-   
     if([categoryName containsString:@"/world/"])
         slidingMenuCell.newsType.image = [UIImage imageNamed:@"globe"];
     else if([categoryName containsString:@"/us/"])
@@ -308,35 +303,38 @@
     else
         slidingMenuCell.newsType.image = [UIImage imageNamed:@"top"];
     
-    NSMutableArray *searchSettings = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:@"read"]];
-    for(int i = 0; i < searchSettings.count; i++){
-        if([[[_feeds objectAtIndex:row] objectForKey: @"title"] isEqualToString:[searchSettings objectAtIndex:i]] && slidingMenuCell.read == NO){
-            slidingMenuCell.read = YES;
-            //[slidingMenuCell newsRead];
-            
-        }
-    }
+    slidingMenuCell.read = [[[NSUserDefaults standardUserDefaults] objectForKey:@"read"] containsObject:_feeds[row]];
+    
+
+    
 }
 - (void)slidingMenu:(RPSlidingMenuViewController *)slidingMenu didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
 
     [super slidingMenu:slidingMenu didSelectItemAtIndexPath:indexPath];
 
+    
     // when a row is tapped do some action
     selectedItem = indexPath.row;
     DetailNewsViewController *detail = [self.storyboard instantiateViewControllerWithIdentifier:@"detail"];
     NSString *urlString = [_feeds[selectedItem] objectForKey: @"feedburner:origLink"];
     NSString *name = [_feeds[selectedItem] objectForKey:@"title"];
+    
+    //save article name once pressed
+    NSMutableArray *searchSettings = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:@"read"]];
+    if (![searchSettings containsObject:_feeds[selectedItem]]) {
+        [searchSettings addObject:_feeds[selectedItem]];
+        [[NSUserDefaults standardUserDefaults] setObject:searchSettings forKey:@"read"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
+    }
+    
+    
+    
     detail.url = urlString;
     detail.articleTitle = name;
     [self presentViewController:detail animated:YES completion:nil];
     
-    //save article name once pressed
-    /*NSMutableArray *searchSettings = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:@"read"]];
-    [searchSettings addObject:name];
-    [[NSUserDefaults standardUserDefaults] setObject:searchSettings forKey:@"read"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
     
-    [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];*/
 }
 
 

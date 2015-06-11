@@ -64,8 +64,6 @@
 }
 
 - (void)setDataSource:(id<TWTRTimelineDataSource>)dataSource {
-    
-    NSLog(@"self.dataSource description: %@", dataSource);
 
 }
 

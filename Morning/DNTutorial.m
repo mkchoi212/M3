@@ -494,7 +494,7 @@ NSInteger const sTutorialTrackingDistance = 100;
     // Advance tutorial
     if (objectCount != [_tutorialSteps count])
     {
-        NSLog(@"DNTutorial: Detected different number of banners being presented than those previously saved.");
+        //NSLog(@"DNTutorial: Detected different number of banners being presented than those previously saved.");
     }
     
     // Advance tutorial

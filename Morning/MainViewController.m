@@ -16,7 +16,6 @@
 #import "RPViewController.h"
 #import <FBShimmeringView.h>
 #import "ForcedViewController.h"
-#import "FABUserTimelineViewController.h"
 #import "StocksViewController.h"
 
 @interface MainViewController (){
@@ -25,7 +24,6 @@
 
 @property (strong, nonatomic) TTScrollSlidingPagesController *slider;
 @property (strong, nonatomic) RPViewController *news;
-@property (weak,nonatomic) FABUserTimelineViewController *twitter;
 @end
 
 @implementation MainViewController

@@ -79,7 +79,6 @@
 
 - (NSInteger)tableView:(SKSTableView *)tableView numberOfSubRowsAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"indexPath.row %lu has %lu subRows", indexPath.row, [self.contents[indexPath.row] count] - 1);
     return [self.contents[indexPath.row] count] - 1;
 }
 

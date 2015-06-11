@@ -34,13 +34,11 @@
                 
             }
             else {
-                NSLog(@"Error: %@", connectionError);
                 completion(nil, connectionError);
             }
         }];
     }
     else {
-        NSLog(@"Error: %@", clientError);
         completion(nil, clientError);
     }
 }
@@ -63,13 +61,11 @@
                 
             }
             else {
-                NSLog(@"Error: %@", connectionError);
                 completion(connectionError);
             }
         }];
     }
     else {
-        NSLog(@"Error: %@", clientError);
         completion(clientError);
     }
     
@@ -93,13 +89,11 @@
                 
             }
             else {
-                NSLog(@"Error: %@", connectionError);
                 completion(connectionError);
             }
         }];
     }
     else {
-        NSLog(@"Error: %@", clientError);
         completion(clientError);
     }
 }
@@ -124,12 +118,10 @@
                     completion(nil, jsonError);
                 } else {
                     if ([jsonDic.allKeys containsObject:@"extended_entities"]) {
-                        NSLog(@"jsonDic: %@", jsonDic[@"extended_entities"]);
                         if ([jsonDic[@"extended_entities"][@"media"][0][@"type"] isEqualToString:@"photo"]) {
                             completion(jsonDic[@"extended_entities"][@"media"][0][@"media_url"], nil);
                         }
                         else {
-                            NSLog(@"Media type is not photo");
                             completion(nil, nil);
                         }
                     } else {
@@ -139,13 +131,11 @@
                 
             }
             else {
-                NSLog(@"Error: %@", connectionError);
                 completion(nil, connectionError);
             }
         }];
     }
     else {
-        NSLog(@"Error: %@", clientError);
         completion(nil, clientError);
     }
 }

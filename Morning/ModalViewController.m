@@ -238,12 +238,6 @@
     return 50;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (IBAction)closeButtonPressed:(id)sender
 {
     NSArray *ranges = [[NSUserDefaults standardUserDefaults]objectForKey:@"ranges"];
@@ -252,5 +246,12 @@
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 
 @end

@@ -362,6 +362,9 @@
                          [transitionContext completeTransition:YES];
                          self.modalController = nil;
                      }];
+    
+#pragma mark THIS METHOD IS CALLED WHEN STOCK VIEW IS DISMISSED
+        NSLog(@"VIEW HAS BEEN DISMISSED");
 
 }
 

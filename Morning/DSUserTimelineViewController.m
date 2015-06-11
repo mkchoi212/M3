@@ -7,7 +7,8 @@
 //
 
 #import "DSUserTimelineViewController.h"
-#import "DSTweetViewController.h"
+#import "JTSImageViewController.h"
+#import "JTSImageInfo.h"
 
 @interface DSUserTimelineViewController ()
 
@@ -21,19 +22,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
     self.navigationItem.title = [NSString stringWithFormat:@"@%@", self.screenName];
-    //TWTRAPIClient *APIClient = [[Twitter sharedInstance] APIClient];
-    
-    /*TWTRUserTimelineDataSource *userTimelineDataSource = [[TWTRUserTimelineDataSource alloc] initWithScreenName:self.screenName APIClient:APIClient];
-     [userTimelineDataSource includeReplies];
-     [userTimelineDataSource includeRetweets];
-     self.dataSource = userTimelineDataSource;*/
+<<<<<<< HEAD
+=======
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+>>>>>>> origin/master
     
     self.prototypeCell = [[TWTRTweetTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     [self.tableView registerClass:[TWTRTweetTableViewCell class] forCellReuseIdentifier:@"Cell"];
@@ -60,9 +53,7 @@
             self.tweets = tweets;
             [self.tableView reloadData];
         }
-        else {
-            NSLog(@"error getting home timeline: %@", error);
-        }
+        
     }];
 }
 
@@ -115,7 +106,7 @@
                 NSLog(@"favorited!");
             }
             else {
-                NSLog(@"Error favoriting: %@", error);
+                NSLog(@"Error favoriting: %@", [error localizedDescription]);
             }
             [self.tableView setEditing:NO animated:YES];
         }];
@@ -159,22 +150,27 @@
             NSLog(@"Error checking media in tweet: %@", error);
         } else {
             if (url != nil){
-                NSLog(@"Tweet contains media: %@", url);
-                [self performSegueWithIdentifier:@"ShowTweet" sender:url];
+                JTSImageInfo *imageInfo = [[JTSImageInfo alloc] init];
+                //for some reason, this works...
+                NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+                UIImage *img = [[UIImage alloc]initWithData:data];
+
+                imageInfo.image = img;
+                imageInfo.referenceRect = tweetView.frame;
+                imageInfo.referenceView = tweetView.superview;
+                imageInfo.referenceContentMode = tweetView.contentMode;
+                imageInfo.referenceCornerRadius = tweetView.layer.cornerRadius;
+                
+                // Setup view controller
+                JTSImageViewController *imageViewer = [[JTSImageViewController alloc]
+                                                       initWithImageInfo:imageInfo
+                                                       mode:JTSImageViewControllerMode_Image
+                                                       backgroundStyle:JTSImageViewControllerBackgroundOption_Scaled];
+                
+                [imageViewer showFromViewController:self.navigationController transition:JTSImageViewControllerTransition_FromOriginalPosition];
             }
         }
     }];
-    
-    
-    
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"ShowTweet"]) {
-        NSURL *url = (NSURL*)sender;
-        DSTweetViewController *vc = segue.destinationViewController;
-        vc.mediaURL = url;
-    }
 }
 
 

@@ -16,7 +16,7 @@
     self.navigationController.navigationBar.translucent = NO;
     //self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(donePressed:)];
 
-    
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     [self loadTrend];
     
 }
@@ -32,4 +32,5 @@
 -(void)donePressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 @end
