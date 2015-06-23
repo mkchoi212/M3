@@ -818,26 +818,36 @@
             </objects>
             <point key="canvasLocation" x="5005" y="1332"/>
         </scene>
-        <!--Twitter Trend Timeline Table View Controller-->
-        <scene sceneID="m3o-GO-vdn">
+        <!--Trend Table View Controller-->
+        <scene sceneID="pil-wC-ik8">
             <objects>
-                <viewController storyboardIdentifier="trends" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OTF-N2-pPQ" customClass="TwitterTrendTimelineTableViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cDz-ew-mUw"/>
-                        <viewControllerLayoutGuide type="bottom" id="hQG-nM-LQi"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="yGf-Ld-jyG">
+                <tableViewController id="RoW-R6-q6I" customClass="DSTrendTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="wY1-5i-Wda">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="7WX-hu-P4v"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="WXp-J4-toa">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WXp-J4-toa" id="bY8-ws-UOx">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="RoW-R6-q6I" id="SnB-1a-jQv"/>
+                            <outlet property="delegate" destination="RoW-R6-q6I" id="irt-dx-r5F"/>
+                        </connections>
+                    </tableView>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xwv-eH-RUv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    <connections>
+                        <segue destination="d2W-MK-nMJ" kind="show" identifier="ShowTweet" id="xbW-Vf-ebc"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MyS-Uy-Mil" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5429" y="940"/>
+            <point key="canvasLocation" x="5386" y="969"/>
         </scene>
         <!--User Timeline View Controller-->
         <scene sceneID="adn-sL-OOX">
@@ -911,6 +921,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jNT-DS-rba" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5792.5" y="1616"/>
+        </scene>
+        <!--Tweet View Controller-->
+        <scene sceneID="Htc-eo-5Dv">
+            <objects>
+                <viewController id="d2W-MK-nMJ" customClass="DSTweetViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Ow-0M-gxY"/>
+                        <viewControllerLayoutGuide type="bottom" id="r1v-Ht-tjU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sr3-XM-g3t">
+                        <rect key="frame" x="0.0" y="0.0" width="329" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xGB-xa-OcS">
+                                <rect key="frame" x="0.0" y="0.0" width="329" height="568"/>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="mnO-mW-tc5">
+                                <rect key="frame" x="146" y="266" width="37" height="37"/>
+                                <color key="color" red="0.95686280729999995" green="0.58823531870000001" blue="0.1411764771" alpha="1" colorSpace="deviceRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="mnO-mW-tc5" secondAttribute="centerX" id="DZU-5E-xtB"/>
+                            <constraint firstAttribute="centerY" secondItem="mnO-mW-tc5" secondAttribute="centerY" id="JZC-gb-9KJ"/>
+                            <constraint firstItem="r1v-Ht-tjU" firstAttribute="top" secondItem="xGB-xa-OcS" secondAttribute="bottom" id="d0s-16-5mf"/>
+                            <constraint firstItem="xGB-xa-OcS" firstAttribute="top" secondItem="Sr3-XM-g3t" secondAttribute="topMargin" id="hpV-fP-TN2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xGB-xa-OcS" secondAttribute="trailing" constant="-16" id="jIj-H4-YAB"/>
+                            <constraint firstItem="xGB-xa-OcS" firstAttribute="leading" secondItem="Sr3-XM-g3t" secondAttribute="leadingMargin" constant="-16" id="orX-aj-6sb"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="329" height="568"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="mnO-mW-tc5" id="Fyn-im-Dsk"/>
+                        <outlet property="imageView" destination="xGB-xa-OcS" id="FfF-oZ-Qtt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AXB-tT-b51" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5748.5" y="969"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JbL-X0-H5J">

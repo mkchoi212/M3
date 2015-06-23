@@ -7,10 +7,10 @@
 //
 
 #import "TwitterTableViewController.h"
-#import "TwitterTrendTimelineTableViewController.h"
 #import "ZFModalTransitionAnimator.h"
 
 #import "DSUserTimelineViewController.h"
+#import "DSTrendTableViewController.h"
 
 @interface TwitterTableViewController ()
 
@@ -187,7 +187,7 @@
       nav.transitioningDelegate = self.animator;
         [self presentViewController:nav animated:YES completion:nil];
     } else {
-        TwitterTrendTimelineTableViewController *modalVC = [[TwitterTrendTimelineTableViewController alloc]init];
+        DSTrendTableViewController *modalVC = [[DSTrendTableViewController alloc]init];
         modalVC.trend = [self.trends objectAtIndex:[self.tableView indexPathForSelectedRow].row];
         
         UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:modalVC];

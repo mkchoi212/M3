@@ -11,7 +11,7 @@
 
 @implementation DSTwitterAPI
 
-+ (void)getHomeTimeline:(DSTwitterHomeTimelineCompletion)completion {
++ (void)getHomeTimeline:(DSTwitterTweetsCompletion)completion {
     NSString *statusesShowEndpoint = @"https://api.twitter.com/1.1/statuses/home_timeline.json";
     NSError *clientError;
     NSURLRequest *request = [[[Twitter sharedInstance] APIClient]
@@ -128,6 +128,45 @@
                         completion(nil, nil);
                     }
                 }
+                
+            }
+            else {
+                completion(nil, connectionError);
+            }
+        }];
+    }
+    else {
+        completion(nil, clientError);
+    }
+}
+
++ (void)getTweetsForTrend:(NSString*)trend completion:(DSTwitterTweetsCompletion)completion {
+    NSLog(@"trend: %@", trend);
+    NSString *statusesShowEndpoint = [NSString stringWithFormat:@"https://api.twitter.com/1.1/search/tweets.json?q=%@&result_type=recent", trend];
+    NSError *clientError;
+    NSURLRequest *request = [[[Twitter sharedInstance] APIClient]
+                             URLRequestWithMethod:@"GET"
+                             URL:statusesShowEndpoint
+                             parameters:nil
+                             error:&clientError];
+    
+    if (request) {
+        [[[Twitter sharedInstance] APIClient] sendTwitterRequest:request completion:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+            if (connectionError == nil) {
+                // handle the response data e.g.
+                NSError *jsonError;
+                NSDictionary *jsonDic = [NSJSONSerialization
+                                         JSONObjectWithData:data
+                                         options:0
+                                         error:&jsonError];
+                
+//                NSArray *jsonArray = [NSJSONSerialization
+//                                      JSONObjectWithData:data
+//                                      options:0
+//                                      error:&jsonError];
+                NSArray *tweets = [TWTRTweet tweetsWithJSONArray:jsonDic[@"statuses"]];
+                NSLog(@"TWEETS: %@", tweets);
+                completion(tweets, nil);
                 
             }
             else {

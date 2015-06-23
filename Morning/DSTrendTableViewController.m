@@ -1,35 +1,35 @@
 //
-//  DSUserTimelineViewController.m
+//  DSTrendTableViewController.m
 //  Morning
 //
-//  Created by Dan Sinclair on 09/06/2015.
+//  Created by Dan Sinclair on 22/06/2015.
 //  Copyright (c) 2015 Life+ Dev. All rights reserved.
 //
 
-#import "DSUserTimelineViewController.h"
+#import "DSTrendTableViewController.h"
 #import "JTSImageViewController.h"
 #import "JTSImageInfo.h"
 
-@interface DSUserTimelineViewController ()
+@interface DSTrendTableViewController ()
 
 @property (nonatomic, strong) NSArray *tweets;
 @property (nonatomic, strong) TWTRTweetTableViewCell *prototypeCell;
 
 @end
 
-@implementation DSUserTimelineViewController
+@implementation DSTrendTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title = [NSString stringWithFormat:@"@%@", self.screenName];
+    self.navigationItem.title = [NSString stringWithFormat:@"%@", self.trend[@"name"]];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
     self.prototypeCell = [[TWTRTweetTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     [self.tableView registerClass:[TWTRTweetTableViewCell class] forCellReuseIdentifier:@"Cell"];
     
+    NSLog(@"self.trend: %@", self.trend);
     [self loadTweets];
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -44,11 +44,13 @@
 }
 
 - (void)loadTweets {
-
-    [DSTwitterAPI getHomeTimeline:^(NSArray *tweets, NSError *error) {
+    
+    [DSTwitterAPI getTweetsForTrend:self.trend[@"query"] completion:^(NSArray *tweets, NSError *error) {
         if (error == nil) {
             self.tweets = tweets;
             [self.tableView reloadData];
+        } else {
+            NSLog(@"Error getting trends: %@", error);
         }
         
     }];
@@ -69,7 +71,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TWTRTweetTableViewCell *cell = (TWTRTweetTableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-   
+    
     
     TWTRTweet *tweet = [self.tweets objectAtIndex:indexPath.row];
     // Configure the cell...
@@ -151,7 +153,7 @@
                 //for some reason, this works...
                 NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
                 UIImage *img = [[UIImage alloc]initWithData:data];
-
+                
                 imageInfo.image = img;
                 imageInfo.referenceRect = tweetView.frame;
                 imageInfo.referenceView = tweetView.superview;
@@ -169,6 +171,5 @@
         }
     }];
 }
-
 
 @end

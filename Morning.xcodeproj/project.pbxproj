@@ -68,11 +68,11 @@
 		18BAF9181A61A26D00B0C4C8 /* DetailNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BAF9171A61A26D00B0C4C8 /* DetailNewsViewController.m */; };
 		18F51DB61A63656600FC624F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F51DB51A63656600FC624F /* Social.framework */; };
 		18F51DB81A63658800FC624F /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F51DB71A63658800FC624F /* Accounts.framework */; };
+		391A8F8D1B389E2B00292AA8 /* DSTrendTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 391A8F8C1B389E2B00292AA8 /* DSTrendTableViewController.m */; };
 		3932C6D81B257C63002D1D29 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3932C6D71B257C63002D1D29 /* Settings.plist */; };
 		3948C77F1B274C0A00671D1C /* DSUserTimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3948C77E1B274C0A00671D1C /* DSUserTimelineViewController.m */; };
 		3948C7821B274DBF00671D1C /* DSTwitterAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 3948C7811B274DBF00671D1C /* DSTwitterAPI.m */; };
 		39FE98D31B204D3D00DD8A97 /* TwitterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FE98D21B204D3D00DD8A97 /* TwitterTableViewController.m */; };
-		39FE98D61B20512500DD8A97 /* TwitterTrendTimelineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FE98D51B20512500DD8A97 /* TwitterTrendTimelineTableViewController.m */; };
 		A78DE9C29E61401B978B2B62 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B8989DD02AA46CF98F97ABF /* libPods.a */; };
 		CA1FA2D51AFF3EC500EF9A0D /* ZFModalTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1FA2D41AFF3EC500EF9A0D /* ZFModalTransitionAnimator.m */; };
 		CA1FA2D81AFF407300EF9A0D /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1FA2D71AFF407300EF9A0D /* ModalViewController.m */; };
@@ -266,6 +266,8 @@
 		18BAF9171A61A26D00B0C4C8 /* DetailNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailNewsViewController.m; sourceTree = "<group>"; };
 		18F51DB51A63656600FC624F /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		18F51DB71A63658800FC624F /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		391A8F8B1B389E2B00292AA8 /* DSTrendTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSTrendTableViewController.h; sourceTree = "<group>"; };
+		391A8F8C1B389E2B00292AA8 /* DSTrendTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSTrendTableViewController.m; sourceTree = "<group>"; };
 		3932C6D71B257C63002D1D29 /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
 		3948C77D1B274C0A00671D1C /* DSUserTimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSUserTimelineViewController.h; sourceTree = "<group>"; };
 		3948C77E1B274C0A00671D1C /* DSUserTimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSUserTimelineViewController.m; sourceTree = "<group>"; };
@@ -273,8 +275,6 @@
 		3948C7811B274DBF00671D1C /* DSTwitterAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSTwitterAPI.m; sourceTree = "<group>"; };
 		39FE98D11B204D3D00DD8A97 /* TwitterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterTableViewController.h; sourceTree = "<group>"; };
 		39FE98D21B204D3D00DD8A97 /* TwitterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterTableViewController.m; sourceTree = "<group>"; };
-		39FE98D41B20512500DD8A97 /* TwitterTrendTimelineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterTrendTimelineTableViewController.h; sourceTree = "<group>"; };
-		39FE98D51B20512500DD8A97 /* TwitterTrendTimelineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterTrendTimelineTableViewController.m; sourceTree = "<group>"; };
 		6B8989DD02AA46CF98F97ABF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8DAC72203149F22FAA4216C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CA1FA2D31AFF3EC500EF9A0D /* ZFModalTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFModalTransitionAnimator.h; sourceTree = "<group>"; };
@@ -441,8 +441,8 @@
 				3948C77E1B274C0A00671D1C /* DSUserTimelineViewController.m */,
 				39FE98D11B204D3D00DD8A97 /* TwitterTableViewController.h */,
 				39FE98D21B204D3D00DD8A97 /* TwitterTableViewController.m */,
-				39FE98D41B20512500DD8A97 /* TwitterTrendTimelineTableViewController.h */,
-				39FE98D51B20512500DD8A97 /* TwitterTrendTimelineTableViewController.m */,
+				391A8F8B1B389E2B00292AA8 /* DSTrendTableViewController.h */,
+				391A8F8C1B389E2B00292AA8 /* DSTrendTableViewController.m */,
 			);
 			name = Twitter;
 			sourceTree = "<group>";
@@ -1172,7 +1172,6 @@
 				CA243A5B1AEC75C800412D43 /* DNTutorial.m in Sources */,
 				18543F511A66422A0073F683 /* CZMainViewController.m in Sources */,
 				185318E11A648EEA0079D280 /* Venue.m in Sources */,
-				39FE98D61B20512500DD8A97 /* TwitterTrendTimelineTableViewController.m in Sources */,
 				CA6984341AA59AB4005B05E8 /* Line.m in Sources */,
 				18543F681A66A0F00073F683 /* NSDate+HumanizedTime.m in Sources */,
 				CA3842021ACDD1D7008A9A07 /* UIScrollView+INSPullToRefresh.m in Sources */,
@@ -1198,6 +1197,7 @@
 				CA30AC1D1AEC29B200115D5E /* DNTutorialStep.m in Sources */,
 				CA6984351AA59AB4005B05E8 /* Circle.m in Sources */,
 				CAAFF1DC1B2907350060529A /* JTSImageViewController.m in Sources */,
+				391A8F8D1B389E2B00292AA8 /* DSTrendTableViewController.m in Sources */,
 				189AFFE21A5B72C100450F27 /* AppDelegate.m in Sources */,
 				CA4EE3971A82D73F0038B893 /* Reachability.m in Sources */,
 				189AFFDF1A5B72C100450F27 /* main.m in Sources */,
