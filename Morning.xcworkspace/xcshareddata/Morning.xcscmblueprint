@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1EF175AA659CF0FA1AFEF5A6EA3166CFEF925AA1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "0C0B8174AECE276E70479D37FB96EB021A80E770" : 0,
+    "1EF175AA659CF0FA1AFEF5A6EA3166CFEF925AA1" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "09FEDCB1-C37D-4DE9-9032-5577595975B1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "0C0B8174AECE276E70479D37FB96EB021A80E770" : "M2.",
+    "1EF175AA659CF0FA1AFEF5A6EA3166CFEF925AA1" : "M2"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Morning",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 203,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Morning.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mkchoi212\/M2..git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0C0B8174AECE276E70479D37FB96EB021A80E770"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mkchoi212\/M3.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1EF175AA659CF0FA1AFEF5A6EA3166CFEF925AA1"
+    }
+  ]
+}

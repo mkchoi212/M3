@@ -1,0 +1,1 @@
+../../../JCStockGraph/Classes/JCStockPriceStore.h

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Raleway.ttf">
+            <string>Raleway</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="THAT'S ALL FOR TODAY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49C-7a-tyM">
+                    <rect key="frame" x="198" y="290" width="190" height="20"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" name="Raleway" family="Raleway" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check-white" translatesAutoresizingMaskIntoConstraints="NO" id="mnL-ge-lF6">
+                    <rect key="frame" x="10" y="283" width="35" height="35"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="7f5-vz-Q29"/>
+                        <constraint firstAttribute="width" constant="35" id="Dod-zr-zGK"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" red="0.35294117650000001" green="0.83921568629999999" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="49C-7a-tyM" secondAttribute="centerY" constant="0.5" id="Aep-Wt-v4W"/>
+                <constraint firstItem="mnL-ge-lF6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="FKP-h3-VYr"/>
+                <constraint firstItem="mnL-ge-lF6" firstAttribute="centerY" secondItem="49C-7a-tyM" secondAttribute="centerY" constant="0.5" id="LfT-YN-NFj"/>
+                <constraint firstAttribute="centerX" secondItem="49C-7a-tyM" secondAttribute="centerX" constant="7.5" id="dvW-4T-n9Q"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="check-white" width="300" height="300"/>
+    </resources>
+</document>

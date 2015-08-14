@@ -1,0 +1,105 @@
+PODS:
+  - AFNetworking (2.4.1):
+    - AFNetworking/NSURLConnection (= 2.4.1)
+    - AFNetworking/NSURLSession (= 2.4.1)
+    - AFNetworking/Reachability (= 2.4.1)
+    - AFNetworking/Security (= 2.4.1)
+    - AFNetworking/Serialization (= 2.4.1)
+    - AFNetworking/UIKit (= 2.4.1)
+  - AFNetworking/NSURLConnection (2.4.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.4.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.4.1)
+  - AFNetworking/Security (2.4.1)
+  - AFNetworking/Serialization (2.4.1)
+  - AFNetworking/UIKit (2.4.1):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - AMSmoothAlert (1.1):
+    - GPUImage
+  - BDBOAuth1Manager (1.4.1):
+    - AFNetworking/NSURLConnection (~> 2.4.0)
+    - AFNetworking/NSURLSession (~> 2.4.0)
+  - BFPaperCheckbox (1.2.7):
+    - UIColor+BFPaperColors
+  - BOZPongRefreshControl (1.0.1)
+  - CorePlot (1.6)
+  - CWStatusBarNotification (2.2.6)
+  - Flow (1.6.2)
+  - FontasticIcons (0.5.0)
+  - GPUImage (0.1.6)
+  - HexColors (2.2.1)
+  - ICETutorial (1.1.1)
+  - INSPullToRefresh (1.0.7)
+  - JCStockGraph (1.0.1):
+    - AFNetworking (~> 2.0)
+    - CorePlot (~> 1.5)
+    - FontasticIcons (~> 0.5)
+    - MBProgressHUD (~> 0.8)
+    - MTDates (~> 0.12)
+  - MBProgressHUD (0.9.1)
+  - MTDates (0.14.3)
+  - NJKWebViewProgress (0.2.3):
+    - NJKWebViewProgress/Core (= 0.2.3)
+    - NJKWebViewProgress/ProgressView (= 0.2.3)
+  - NJKWebViewProgress/Core (0.2.3)
+  - NJKWebViewProgress/ProgressView (0.2.3)
+  - SDWebImage (3.7.2):
+    - SDWebImage/Core (= 3.7.2)
+  - SDWebImage/Core (3.7.2)
+  - Shimmer (1.0.2)
+  - STTwitter (0.2.1)
+  - TSMessages (0.9.12):
+    - HexColors (~> 2.2.0)
+  - UIColor+BFPaperColors (1.7.1)
+  - ZFDragableModalTransition (0.5.1)
+
+DEPENDENCIES:
+  - AFNetworking (~> 2.4.1)
+  - AMSmoothAlert
+  - BDBOAuth1Manager
+  - BFPaperCheckbox
+  - BOZPongRefreshControl
+  - CWStatusBarNotification
+  - Flow
+  - ICETutorial
+  - INSPullToRefresh
+  - JCStockGraph
+  - NJKWebViewProgress
+  - SDWebImage
+  - Shimmer
+  - STTwitter
+  - TSMessages
+  - ZFDragableModalTransition
+
+SPEC CHECKSUMS:
+  AFNetworking: 41d45d2c14219af0fa5addf3cfd433a002c13c9f
+  AMSmoothAlert: 108cf0fc3eea9256ccfdcd9deaa283999ac1e47e
+  BDBOAuth1Manager: e4c50f9b4ecda6c2a9da680a45d89985e4f3edb6
+  BFPaperCheckbox: 55670e5d8dc1e060972b0d1db6380771339451d8
+  BOZPongRefreshControl: c956ee1f1bed94d3554ad081c4ff1450cfc6d349
+  CorePlot: 820901f6c147f2d84549ffa1f0902869f980d74d
+  CWStatusBarNotification: b7d08c63bbfcceee08b63cab041560a6f5cdefb6
+  Flow: 4d76357272e7d1e508d4797ed6d168c72eaf13f1
+  FontasticIcons: f20740bf8f1d3565c312f1c3b9806339212b58aa
+  GPUImage: 4675ce4a5370ca92fcea8623b2a08b8f0c51b940
+  HexColors: abfd172e329dab59888614ccba6f216cec59289d
+  ICETutorial: 6cb15e46066afc359357f048d1b5fca444d69c83
+  INSPullToRefresh: b553fd02817fd4cb5b77ca852809c24482075f69
+  JCStockGraph: e773f0735d661ee8b34ff8c7782e161afe53945e
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  MTDates: 027c933033f311818816650bec9c3d014610253a
+  NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
+  SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
+  Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
+  STTwitter: 7b348a4600eb9f868a3d1c9031b4fd8533d123e7
+  TSMessages: c8cc7b80f2a833af533872cd02010cac061532cc
+  UIColor+BFPaperColors: b1efa4320e2f56c4b14f73232faf967ba0e5b4a2
+  ZFDragableModalTransition: 048189eda437f91944ce6d5151618b8bf770196d
+
+COCOAPODS: 0.38.1

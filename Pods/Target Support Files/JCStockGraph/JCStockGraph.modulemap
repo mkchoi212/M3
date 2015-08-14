@@ -1,0 +1,6 @@
+module JCStockGraph {
+  umbrella header "JCStockGraph-umbrella.h"
+
+  export *
+  module * { export * }
+}

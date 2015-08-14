@@ -1,0 +1,6 @@
+module AMSmoothAlert {
+  umbrella header "AMSmoothAlert-umbrella.h"
+
+  export *
+  module * { export * }
+}

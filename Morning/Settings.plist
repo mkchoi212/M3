@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<string>Weather</string>
+		<string>Units</string>
+	</array>
+	<array>
+		<string>Nearest…</string>
+		<string>Café</string>
+		<string>Gas Station</string>
+		<string>Breakfast</string>
+		<string>Bars</string>
+	</array>
+	<array>
+		<string>cool.af</string>
+		<string>About</string>
+		<string>Contact Us</string>
+		<string>Rate me</string>
+	</array>
+	<array>
+		<string>Save and Refresh</string>
+	</array>
+	<array>
+		<string></string>
+	</array>
+</array>
+</plist>
