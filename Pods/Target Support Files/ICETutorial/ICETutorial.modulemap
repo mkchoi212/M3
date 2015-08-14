@@ -1,6 +1,0 @@
-module ICETutorial {
-  umbrella header "ICETutorial-umbrella.h"
-
-  export *
-  module * { export * }
-}

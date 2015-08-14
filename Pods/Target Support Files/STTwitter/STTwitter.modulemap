@@ -1,6 +1,0 @@
-module STTwitter {
-  umbrella header "STTwitter-umbrella.h"
-
-  export *
-  module * { export * }
-}

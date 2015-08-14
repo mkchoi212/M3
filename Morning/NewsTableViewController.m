@@ -113,7 +113,7 @@
 
     
     DetailNewsViewController *detail = [self.storyboard instantiateViewControllerWithIdentifier:@"detail"];
-    NSString *urlString = [feeds[indexPath.row] objectForKey: @"feedburner:origLink"];
+    NSString *urlString = [feeds[indexPath.row] objectForKey: @"link"];
     NSString *name = [feeds[indexPath.row] objectForKey:@"title"];
     
     //save article name once pressed
@@ -157,7 +157,7 @@
     if ([elementName isEqualToString:@"item"]) {
         
         [item setObject:title forKey:@"title"];
-        [item setObject:link forKey:@"feedburner:origLink"];
+        [item setObject:link forKey:@"link"];
         [item setObject:date forKey:@"pubDate"];
         [item setObject:media forKey:@"media:thumbnail"];
         [feeds addObject:[item copy]];
@@ -170,7 +170,7 @@
     
     if ([element isEqualToString:@"title"]) {
         [title appendString:string];
-    } else if ([element isEqualToString:@"feedburner:origLink"]) {
+    } else if ([element isEqualToString:@"link"]) {
         [link appendString:string];
     }
     else if ([element isEqualToString:@"pubDate"]) {
@@ -191,7 +191,7 @@
     NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:buttonPosition];
     if (indexPath != nil){
         NSString *textToShare = [[feeds objectAtIndex:indexPath.row]objectForKey:@"title"];
-        NSString *urlString = [feeds[indexPath.row] objectForKey: @"feedburner:origLink"];
+        NSString *urlString = [feeds[indexPath.row] objectForKey: @"link"];
         NSString *orgdate = [[feeds objectAtIndex:indexPath.row] objectForKey: @"pubDate"];
         NSArray *objectsToShare = @[textToShare, urlString, orgdate];
         UIActivityViewController *shareVC = [[UIActivityViewController alloc]initWithActivityItems:objectsToShare applicationActivities:nil];

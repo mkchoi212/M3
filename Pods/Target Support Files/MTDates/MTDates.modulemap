@@ -1,6 +1,0 @@
-module MTDates {
-  umbrella header "MTDates-umbrella.h"
-
-  export *
-  module * { export * }
-}
