@@ -10,7 +10,6 @@
 #import "ACPReminder.h"
 #import "MainViewController.h"
 #import "CZMainViewController.h"
-#import "iRate.h"
 #import <Fabric/Fabric.h>
 #import <TwitterKit/TwitterKit.h>
 
@@ -20,18 +19,6 @@
 @end
 
 @implementation AppDelegate
-
-+ (void)initialize
-{
-    //set the bundle ID. normally you wouldn't need to do this
-    //as it is picked up automatically from your Info.plist file
-    //but we want to test with an app that's actually on the store
-    [iRate sharedInstance].applicationBundleID = @"MJC.Morning";
-    [iRate sharedInstance].onlyPromptIfLatestVersion = NO;
-    [iRate sharedInstance].usesUntilPrompt = 4;
-    [iRate sharedInstance].message = @"A favor";
-    [iRate sharedInstance].messageTitle = @"How do you like the app so far? Go to the app store and write a review!";
-}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

@@ -56,7 +56,7 @@
 
 - (void)loadTweets {
 
-    [DSTwitterAPI getHomeTimeline:^(NSArray *tweets, NSError *error) {
+    [DSTwitterAPI getHomeTimeline:^(NSArray *tweets, NSError *error, NSMutableIndexSet *sensitiveIDX) {
         if (error == nil) {
             self.tweets = tweets;
             [self.tableView reloadData];

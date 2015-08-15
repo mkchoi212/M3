@@ -30,16 +30,16 @@
                                       options:0
                                       error:&jsonError];
                 NSArray *tweets = [TWTRTweet tweetsWithJSONArray:jsonArray];
-                completion(tweets, nil);
+                completion(tweets, nil, nil);
                 
             }
             else {
-                completion(nil, connectionError);
+                completion(nil, connectionError, nil);
             }
         }];
     }
     else {
-        completion(nil, clientError);
+        completion(nil, clientError, nil);
     }
 }
 
@@ -155,27 +155,34 @@
             if (connectionError == nil) {
                 // handle the response data e.g.
                 NSError *jsonError;
+                NSMutableIndexSet *sensitiveIDX = [[NSMutableIndexSet alloc]init];
                 NSDictionary *jsonDic = [NSJSONSerialization
                                          JSONObjectWithData:data
                                          options:0
                                          error:&jsonError];
                 
-                //                NSArray *jsonArray = [NSJSONSerialization
-                //                                      JSONObjectWithData:data
-                //                                      options:0
-                //                                      error:&jsonError];
-                NSArray *tweets = [TWTRTweet tweetsWithJSONArray:jsonDic[@"statuses"]];
-                NSLog(@"TWEETS: %@", tweets);
-                completion(tweets, nil);
+                NSMutableArray *tweetInfo = [jsonDic objectForKey:@"statuses"];
+                
+                for (int i = 0; i < tweetInfo.count; i++){
+                    NSDictionary *tweet = [tweetInfo objectAtIndex:i];
+                    BOOL sensitive = [tweet objectForKey:@"possibily_sensitive"];
+                    if (sensitive == YES){
+                        [sensitiveIDX addIndex:i];
+                        NSLog(@"REMOVED!");
+                    }
+                }
+                
+                NSArray *tweets = [TWTRTweet tweetsWithJSONArray:tweetInfo];
+                completion(tweets, nil, sensitiveIDX);
                 
             }
             else {
-                completion(nil, connectionError);
+                completion(nil, connectionError, nil);
             }
         }];
     }
     else {
-        completion(nil, clientError);
+        completion(nil, clientError, nil);
     }
 }
 

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-typedef void(^DSTwitterTweetsCompletion)(NSArray *tweets, NSError *error);
+typedef void(^DSTwitterTweetsCompletion)(NSArray *tweets, NSError *error, NSMutableIndexSet *sensitiveContentIDX);
 typedef void(^DSTwitterRetweetCompletion)(NSError *error);
 typedef void(^DSTwitterFavoriteCompletion)(NSError *error);
 typedef void(^DSTwitterTweetCotainsImageCompletion)(NSURL *url, NSError *error);

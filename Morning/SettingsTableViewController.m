@@ -298,9 +298,8 @@
             // Present mail view controller on screen
             [self presentViewController:mc animated:YES completion:NULL];
         }
-
         else if(indexPath.subRow == 3) {
-            NSString *iTunesLink = @"https://itunes.apple.com/us/app/apple-store/id375380948?mt=8";
+            NSString *iTunesLink = @"https://itunes.apple.com/us/app/apple-store/id1021114249?mt=8";
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:iTunesLink]];
         }
     }

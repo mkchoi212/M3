@@ -79,8 +79,6 @@
 		CA30AC1D1AEC29B200115D5E /* DNTutorialStep.m in Sources */ = {isa = PBXBuildFile; fileRef = CA30AC161AEC29B200115D5E /* DNTutorialStep.m */; };
 		CA4EE3941A82D63E0038B893 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA4EE3931A82D63E0038B893 /* SystemConfiguration.framework */; };
 		CA4EE3971A82D73F0038B893 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4EE3961A82D73F0038B893 /* Reachability.m */; };
-		CA4F2DD01B36435D00AA7814 /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CA4F2DCD1B36435D00AA7814 /* iRate.bundle */; };
-		CA4F2DD11B36435D00AA7814 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4F2DCF1B36435D00AA7814 /* iRate.m */; };
 		CA4F2DD51B374D1A00AA7814 /* OptionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4F2DD41B374D1A00AA7814 /* OptionsTableViewController.m */; };
 		CA5443F11AFDD39500CE85B4 /* ForcedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA5443F01AFDD39500CE85B4 /* ForcedViewController.m */; };
 		CA5443F41AFDD68700CE85B4 /* PWParallaxScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA5443F31AFDD68700CE85B4 /* PWParallaxScrollView.m */; };
@@ -270,9 +268,6 @@
 		CA4EE3931A82D63E0038B893 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CA4EE3951A82D73F0038B893 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		CA4EE3961A82D73F0038B893 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		CA4F2DCD1B36435D00AA7814 /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iRate.bundle; sourceTree = "<group>"; };
-		CA4F2DCE1B36435D00AA7814 /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
-		CA4F2DCF1B36435D00AA7814 /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
 		CA4F2DD31B374D1A00AA7814 /* OptionsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsTableViewController.h; sourceTree = "<group>"; };
 		CA4F2DD41B374D1A00AA7814 /* OptionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsTableViewController.m; sourceTree = "<group>"; };
 		CA5443EF1AFDD39500CE85B4 /* ForcedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForcedViewController.h; sourceTree = "<group>"; };
@@ -624,7 +619,6 @@
 			isa = PBXGroup;
 			children = (
 				CAA980001B3790B600E2F7BF /* Fonts */,
-				CA4F2DD21B36436100AA7814 /* Rate me! */,
 				CABF066E1B2E2663005450C5 /* stock search */,
 				CAA266471B2A6C4E006EC332 /* Cool Image Effect */,
 				189A00321A5B7A4500450F27 /* TT Sliding Source */,
@@ -721,16 +715,6 @@
 				CA30AC161AEC29B200115D5E /* DNTutorialStep.m */,
 			);
 			name = "gesture tutorial";
-			sourceTree = "<group>";
-		};
-		CA4F2DD21B36436100AA7814 /* Rate me! */ = {
-			isa = PBXGroup;
-			children = (
-				CA4F2DCD1B36435D00AA7814 /* iRate.bundle */,
-				CA4F2DCE1B36435D00AA7814 /* iRate.h */,
-				CA4F2DCF1B36435D00AA7814 /* iRate.m */,
-			);
-			name = "Rate me!";
 			sourceTree = "<group>";
 		};
 		CA5443F71AFDD6BB00CE85B4 /* Landscape News View */ = {
@@ -943,7 +927,6 @@
 				CA23E3CA1B1FE47A00FE3B96 /* DigitsKitResources.bundle in Resources */,
 				CAA97FFF1B3790A200E2F7BF /* Raleway.ttf in Resources */,
 				CA58CF7C1AA4E46E005AAF26 /* expandableImage.png in Resources */,
-				CA4F2DD01B36435D00AA7814 /* iRate.bundle in Resources */,
 				189A001F1A5B782000450F27 /* Main.storyboard in Resources */,
 				3932C6D81B257C63002D1D29 /* Settings.plist in Resources */,
 				18543F661A66A0F00073F683 /* Localizable.strings in Resources */,
@@ -1065,7 +1048,6 @@
 				18543F681A66A0F00073F683 /* NSDate+HumanizedTime.m in Sources */,
 				CAB11CF61A9D5512009708C3 /* TutorialViewController.m in Sources */,
 				186AE7611A704EA7000A9C71 /* RemindersViewController.m in Sources */,
-				CA4F2DD11B36435D00AA7814 /* iRate.m in Sources */,
 				CAA266451B2A6C4A006EC332 /* UIApplication+JTSImageViewController.m in Sources */,
 				CA58CF7B1AA4E46E005AAF26 /* SKSTableViewCellIndicator.m in Sources */,
 				CAA260EF1B3F4D8D005D9D91 /* NewsTableViewController.m in Sources */,

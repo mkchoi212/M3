@@ -14,7 +14,7 @@
 
 @interface TwitterTrendTimelineTableViewController ()
 
-@property (nonatomic, strong) NSArray *tweets;
+@property (nonatomic, strong) NSMutableArray *tweets;
 @property (nonatomic, strong) TWTRTweetTableViewCell *prototypeCell;
 
 @end
@@ -31,30 +31,30 @@
     [self.tableView registerClass:[TWTRTweetTableViewCell class] forCellReuseIdentifier:@"Cell"];
     
     [self loadTweets];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+    
     if([[NSUserDefaults standardUserDefaults]boolForKey:@"twitter"] == NO){
         AMSmoothAlertView *alert = [[AMSmoothAlertView alloc]initDropAlertWithTitle:@"Tip" andText:@"Swipe the tweet to favorite or retweet" andCancelButton:NO forAlertType:AlertInfo];
         [alert show];
         [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"twitter"];
         [[NSUserDefaults standardUserDefaults]synchronize];
     }
+}
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+   
     self.navigationController.navigationBarHidden = NO;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 - (void)loadTweets {
     
-    [DSTwitterAPI getTweetsForTrend:self.trend[@"query"] completion:^(NSArray *tweets, NSError *error) {
+    [DSTwitterAPI getTweetsForTrend:self.trend[@"query"] completion:^(NSArray *tweets, NSError *error, NSMutableIndexSet *sensitiveIDX) {
         if (error == nil) {
-            self.tweets = tweets;
+            self.tweets = [[NSMutableArray alloc]initWithArray:tweets];
+            if (sensitiveIDX.count != 0){
+                [self.tweets removeObjectsAtIndexes:sensitiveIDX];
+            }
             [self.tableView reloadData];
         } else {
             NSLog(@"Error getting trends: %@", error);
