@@ -94,19 +94,15 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
         if let displayPhone = business.displayPhone {
             phoneButton.setTitle(displayPhone, forState: UIControlState.Normal)
         }
-        println(business.closed!)
         if (business.closed! == true){
-            isOpen.text = "OPEN"
-            isOpen.textColor = UIColor.greenColor()
-        }
-        else{
             isOpen.text = "CLOSED"
             isOpen.textColor = UIColor.redColor()
         }
-
-    
+        else{
+            isOpen.text = "OPEN"
+            isOpen.textColor = UIColor.greenColor()
+        }
     }
-
     
     @IBAction func touchedCallBusinessButton() {
         if let businessPhoneNumber = business.phoneNumber {
